@@ -12,3 +12,5 @@ and developed from Damien122's release.
 
 ## GitHub
 Check out the code, leave feedback and feature requests now on [GitHub/corystein](https://github.com/corystein/AutoIt-VSCode)
+
+[comment]: vsce - Publishing Tool Reference https://code.visualstudio.com/docs/tools/vscecli
