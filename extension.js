@@ -36,7 +36,7 @@ function activate(context) {
         //Get the current file name
         var thisFile = vscode.window.activeTextEditor.document.fileName;
         //Launch the AutoIt Wrapper executable with the script's path
-        launch(aiwPath, ['/in', thisFile], (err, stdout, stderr) => {
+        launch(aiwPath, ['/in', thisFile, '/NoStatus'], (err, stdout, stderr) => {
             if (err) {
                 console.log(err); 
                 vscode.window.showErrorMessage(err);
