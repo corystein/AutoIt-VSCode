@@ -8,7 +8,7 @@ var launch = require('child_process').execFile;
 function activate(context) {
 
     var aiPath = "C:\\Program Files (x86)\\AutoIt3\\AutoIt3.exe"
-    var aiwPath = "C:\\Program Files (x86)\\AutoIt3\\SciTE\\AutoIt3Wrapper\\AutoIt3Wrapper.exe"
+    var aiwPath = "C:\\Program Files (x86)\\AutoIt3\\SciTE\\AutoIt3Wrapper\\AutoIt3Wrapper.exe /in "
     var helpPath = "C:\\Program Files (x86)\\AutoIt3\\AutoIt3Help.exe"
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
@@ -36,7 +36,7 @@ function activate(context) {
         //Get the current file name
         var thisFile = vscode.window.activeTextEditor.document.fileName;
         //Launch the AutoIt Wrapper executable with the script's path
-        launch(aiwPath, "/in " + [thisFile], (err, stdout, stderr) => {
+        launch(aiwPath, [thisFile], (err, stdout, stderr) => {
             if (err) {
                 console.log(err); 
                 vscode.window.showErrorMessage(err);
