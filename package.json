@@ -18,6 +18,7 @@
 	"main": "./extension",
 	"activationEvents": [
 			"onCommand:extension.runScript",
+			"onCommand:extension.compileScript",
 			"onCommand:extension.launchHelp",
 			"onCommand:extension.launchInfo",
 			"onCommand:extension.debugMsgBox"
@@ -32,6 +33,9 @@
 		"commands": [{ 
 			"command": "extension.runScript",
 			"title": "AutoIt - Run Script" 
+		}, { 
+			"command": "extension.compileScript",
+			"title": "AutoIt - Compile Script" 
 		}, {
 			"command": "extension.launchHelp",
 			"title": "AutoIt - Help"
@@ -56,6 +60,10 @@
 		"keybindings": [{
 			"command": "extension.runScript",
 			"key": "f5",
+			"when": "editorTextFocus"
+		}, {
+			"command": "extension.compileScript",
+			"key": "f7",
 			"when": "editorTextFocus"
 		}, {
 			"command": "extension.launchHelp",
