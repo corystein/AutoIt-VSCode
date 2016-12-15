@@ -11,4 +11,4 @@ and developed from Damien122's release.
 * Launch AutoIt Help for highlighted text 
 
 ## GitHub
-Check out the code, leave feedback and feature requests now on [GitHub/loganch](https://github.com/loganch/AutoIt-VSCode)
+Check out the code, leave feedback and feature requests now on [GitHub/corystein](https://github.com/corystein/AutoIt-VSCode)
