@@ -3,7 +3,7 @@
 	"displayName": "AutoIt",
 	"description": "AutoIt",
 	"version": "0.0.6",
-	"publisher": "CoryStein",
+	"publisher": "crstein",
 	"engines": {
 		"vscode": "^0.10.1"
 	},
