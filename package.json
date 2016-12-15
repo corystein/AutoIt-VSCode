@@ -2,8 +2,8 @@
 	"name": "autoit",
 	"displayName": "AutoIt",
 	"description": "AutoIt",
-	"version": "0.0.5",
-	"publisher": "Damien",
+	"version": "0.0.6",
+	"publisher": "CoryStein",
 	"engines": {
 		"vscode": "^0.10.1"
 	},
