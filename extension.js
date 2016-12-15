@@ -36,7 +36,7 @@ function activate(context) {
         //Get the current file name
         var thisFile = vscode.window.activeTextEditor.document.fileName;
         //Launch the AutoIt executable with the script's path
-        launch(aiPath, [thisFile], (err, stdout, stderr) => {
+        launch(aiwPath, [thisFile], (err, stdout, stderr) => {
             if (err) {
                 vscode.window.showErrorMessage(err);
                 return;
