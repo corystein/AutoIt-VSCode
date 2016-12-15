@@ -80,8 +80,8 @@
 		}],
 		"repository": {
 			"type": "git",
-			"url": "https://github.com/loganch/AutoIt-VSCode.git"
+			"url": "https://github.com/corystein/AutoIt-VSCode.git"
 		},
-		"homepage": "https://github.com/loganch/AutoIt-VSCode/blob/master/README.md"
+		"homepage": "https://github.com/corystein/AutoIt-VSCode/blob/master/README.md"
 	}
 }
