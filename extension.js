@@ -39,7 +39,7 @@ function activate(context) {
         var myOutputChannel = vscode.window.createOutputChannel('AutoIt');
 
         //Launch the AutoIt Wrapper executable with the script's path
-        launch(aiPath, [aiwPath, '/NoStatus', '/prod', '/in', thisFile], (err, stdout, stderr) => {
+        launch(aiPath, [aiwPath, '/prod', '/in', thisFile], (err, stdout, stderr) => {
             if (err) {
                 console.log(err); 
                 vscode.window.showErrorMessage(err);
