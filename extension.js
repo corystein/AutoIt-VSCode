@@ -36,13 +36,18 @@ function activate(context) {
         //Get the current file name
         var thisFile = vscode.window.activeTextEditor.document.fileName;
 
-        var myOutputChannel = vscode.window.createOutputChannel('AutoIt');
-
         //Launch the AutoIt Wrapper executable with the script's path
         launch(aiwPath, ['/prod', '/in', thisFile], (err, stdout, stderr) => {
+            console.log('stdout: ', stdout);
+            console.log('stderr: ', stderr);
+            if (err !== null) {
+                console.log('exec error: ', err);
+            }
+            /*
             if (err) throw err;
 
             console.log(stdout, stderr);         
+            */
             /*
             if (err) {
                 console.log(err); 
