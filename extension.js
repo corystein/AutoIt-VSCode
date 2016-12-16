@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 var vscode = require('vscode');
 var launch = require('child_process').execFile;
+var exec = require('child_process').exec;
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -36,6 +37,7 @@ function activate(context) {
         //Get the current file name
         var thisFile = vscode.window.activeTextEditor.document.fileName;
 
+        /*
         //Launch the AutoIt Wrapper executable with the script's path
         launch(aiwPath, ['/prod', '/in', thisFile], (err, stdout, stderr) => {
             console.log('stdout: ', stdout);
@@ -43,21 +45,17 @@ function activate(context) {
             if (err !== null) {
                 console.log('exec error: ', err);
             }
-            /*
-            if (err) throw err;
 
-            console.log(stdout, stderr);         
-            */
-            /*
-            if (err) {
-                console.log(err); 
-                vscode.window.showErrorMessage(err);
-                return;
-            }
-
-            console.log(stdout);
-            */
         });
+        */
+        exec(aiwPath, ['/prod', '/in', thisFile], function(error, stdout, stderr) {
+            console.log('stdout: ', stdout);
+            console.log('stderr: ', stderr);
+            if (error !== null) {
+                console.log('exec error: ', error);
+            }
+        });
+
     });
 
     var launchHelp = vscode.commands.registerCommand('extension.launchHelp', function () {
