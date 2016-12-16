@@ -8,7 +8,7 @@ var launch = require('child_process').execFile;
 function activate(context) {
 
     var aiPath = "C:\\Program Files (x86)\\AutoIt3\\AutoIt3.exe"
-    var aiwPath = "C:\\Program Files (x86)\\AutoIt3\\SciTE\\AutoIt3Wrapper\\AutoIt3Wrapper.au3"
+    var aiwPath = "C:\\Program Files (x86)\\AutoIt3\\SciTE\\AutoIt3Wrapper\\AutoIt3Wrapper.exe"
     var helpPath = "C:\\Program Files (x86)\\AutoIt3\\AutoIt3Help.exe"
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
@@ -39,7 +39,11 @@ function activate(context) {
         var myOutputChannel = vscode.window.createOutputChannel('AutoIt');
 
         //Launch the AutoIt Wrapper executable with the script's path
-        launch(aiPath, [aiwPath, '/prod', '/in', thisFile], (err, stdout, stderr) => {
+        launch(aiwPath, ['/prod', '/in', thisFile], (err, stdout, stderr) => {
+            if (err) throw err;
+
+            console.log(stdout, stderr);         
+            /*
             if (err) {
                 console.log(err); 
                 vscode.window.showErrorMessage(err);
@@ -47,6 +51,7 @@ function activate(context) {
             }
 
             console.log(stdout);
+            */
         });
     });
 
