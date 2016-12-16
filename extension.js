@@ -39,12 +39,11 @@ function activate(context) {
 
         //Launch the AutoIt Wrapper executable with the script's path
         launch(aiPath, [aiwPath, '/prod', '/in', thisFile], (err, stdout, stderr) => {
-            console.log('stdout: ', stdout);
-            console.log('stderr: ', stderr);
-            if (err !== null) {
-                console.log('exec error: ', err);
+            if (err) {
+                vscode.window.showErrorMessage(err);
+                return;
             }
-            vscode.stdout(stdout);
+            //vscode.stdout(stdout);
         });
 
     });

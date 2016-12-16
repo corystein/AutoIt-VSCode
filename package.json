@@ -2,7 +2,7 @@
 	"name": "autoit",
 	"displayName": "AutoIt",
 	"description": "AutoIt",
-	"version": "0.0.21",
+	"version": "0.0.22",
 	"publisher": "crstein",
 	"engines": {
 		"vscode": "^0.10.1"
