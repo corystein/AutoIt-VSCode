@@ -35,6 +35,9 @@ function activate(context) {
         vscode.window.activeTextEditor.document.save();
         //Get the current file name
         var thisFile = vscode.window.activeTextEditor.document.fileName;
+
+        var myOutputChannel = vscode.window.createOutputChannel('AutoIt');
+
         //Launch the AutoIt Wrapper executable with the script's path
         launch(aiPath, [aiwPath, '/NoStatus', '/prod', '/in', thisFile], (err, stdout, stderr) => {
             if (err) {
@@ -42,6 +45,8 @@ function activate(context) {
                 vscode.window.showErrorMessage(err);
                 return;
             }
+
+            console.log(stdout);
         });
     });
 
